@@ -1,11 +1,11 @@
 export class Product {
-    name: string;
+    public name: string;
     private price: number;
     static DISCOUNT_PERCENT: number = 10;
 
-    constructor() {
-        this.name = ''
-        this.price = 0
+    constructor(name: string, price: number = 0) {
+        this.name = name
+        this.price = price
     }
 
     getPrice(): number {
