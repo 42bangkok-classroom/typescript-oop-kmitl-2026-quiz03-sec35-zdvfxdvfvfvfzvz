@@ -19,9 +19,4 @@ export class User {
         this.loginAttempts++
         return password === this.password
     }
-    User(username: string, password: string) {
-        this.username = username
-        this.password = password
-        this.loginAttempts = 0
-    }
 }

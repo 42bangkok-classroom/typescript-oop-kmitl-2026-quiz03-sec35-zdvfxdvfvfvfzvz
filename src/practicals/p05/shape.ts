@@ -1,16 +1,12 @@
-export class Shape {
+import { Drawable } from './drawable'
+
+export abstract class Shape implements Drawable {
     constructor(public color: string) {}
 
     getColor(): string {
         return this.color
     }
-    Shape(){
-        console.log('Shape constructor called')
-    }
-    draw(): void {
-        console.log(`Drawing a shape with color ${this.color}`)
-    }
-    getArea(): number {
-        return 0
-    }
+
+    abstract draw(): void
+    abstract getArea(): number
 }
